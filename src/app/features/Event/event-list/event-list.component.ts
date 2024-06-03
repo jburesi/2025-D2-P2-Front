@@ -1,11 +1,12 @@
 import { Component, OnInit } from '@angular/core';
+import { RouterLink } from '@angular/router';
 import { Event } from '../../../models/event.models';
 import { EventService } from '../../../services/Event/event.service';
 
 @Component({
   selector: 'app-event-list',
   standalone: true,
-  imports: [],
+  imports: [RouterLink],
   templateUrl: './event-list.component.html',
 })
 export class EventListComponent implements OnInit {
