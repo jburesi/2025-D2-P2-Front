@@ -1,0 +1,32 @@
+<div>
+  <p>{{ errorMessage }}</p>
+  <h2>Add Event</h2>
+  <form [formGroup]="form">
+    <div>
+      <label for="title">Event Title:</label>
+      <input type="text" id="title" name="title" formControlName="title" />
+    </div>
+    <div>
+      <label for="date">Event Date:</label>
+      <input type="date" id="date" name="date" formControlName="date" />
+    </div>
+    <div>
+      <label for="description">Event Description:</label>
+      <textarea
+        id="description"
+        name="description"
+        formControlName="description"
+      ></textarea>
+    </div>
+    <div>
+      <label for="eventLocation">Event Location:</label>
+      <input
+        type="text"
+        id="location"
+        name="location"
+        formControlName="location"
+      />
+    </div>
+    <button type="submit" (click)="submit()">Publish</button>
+  </form>
+</div>
