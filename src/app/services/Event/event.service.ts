@@ -10,18 +10,18 @@ export class EventService {
   constructor(private apiRequest: ApiRequestService) {}
 
   addEvent(event: Event): Observable<Event> {
-    return this.apiRequest.post<Event>('Event', event);
+    return this.apiRequest.post<Event>('Events', event);
   }
 
   getEvents(): Observable<Event[]> {
-    return this.apiRequest.get<Event[]>('Event');
+    return this.apiRequest.get<Event[]>('Events');
   }
 
   updateEvent(event: Event): Observable<Event> {
-    return this.apiRequest.put<Event>('Event', event);
+    return this.apiRequest.put<Event>('Events', event);
   }
 
   deleteEvent(id: number): Observable<Event> {
-    return this.apiRequest.delete<Event>(`Event/${id}`);
+    return this.apiRequest.delete<Event>(`Events/${id}`);
   }
 }
